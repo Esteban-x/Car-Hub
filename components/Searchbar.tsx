@@ -28,7 +28,7 @@ const SearchBar = () => {
     e.preventDefault();
 
     if (manufacturer.trim() === "" && model.trim() === "") {
-      return alert("Please provide some input");
+      return alert("Veuillez remplir les champs");
     }
 
     updateSearchParams(model.toLowerCase(), manufacturer.toLowerCase());

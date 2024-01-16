@@ -51,7 +51,8 @@ export default async function Home({ searchParams }: HomeProps) {
         ) : (
           <div className="home__error-container">
             <h2 className="text-black text-xl font-bold">
-              Auncun résultat ne correspond à votre recherche
+              Aucun résultat ne correspond à votre recherche. Veuillez
+              réessayer.
             </h2>
             <p>{allCars?.message}</p>
           </div>

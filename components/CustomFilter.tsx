@@ -2,25 +2,19 @@
 
 import { Fragment, useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { Listbox, Transition } from "@headlessui/react";
-
 import { CustomFilterProps } from "@types";
-import { updateSearchParams } from "@utils";
 
 export default function CustomFilter({ title, options }: CustomFilterProps) {
-  const router = useRouter();
   const [selected, setSelected] = useState(options[0]);
 
   const handleUpdateParams = (e: { title: string; value: string }) => {
-    // Update the URL search parameters
     const searchParams = new URLSearchParams(window.location.search);
     searchParams.set(title, e.value.toLowerCase());
     const newPathName = `${
       window.location.pathname
     }?${searchParams.toString()}`;
 
-    // Use pushState to modify the URL without reloading the page
     window.history.pushState({}, "", newPathName);
     window.location.reload();
   };
@@ -35,7 +29,6 @@ export default function CustomFilter({ title, options }: CustomFilterProps) {
         }}
       >
         <div className="relative w-fit z-10">
-          {/* Button for the listbox */}
           <Listbox.Button className="custom-filter__btn">
             <span className="block truncate">{selected.title}</span>
             <Image
@@ -46,15 +39,14 @@ export default function CustomFilter({ title, options }: CustomFilterProps) {
               alt="chevron_up-down"
             />
           </Listbox.Button>
-          {/* Transition for displaying the options */}
+
           <Transition
-            as={Fragment} // group multiple elements without introducing an additional DOM node i.e., <></>
+            as={Fragment}
             leave="transition ease-in duration-100"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
             <Listbox.Options className="custom-filter__options">
-              {/* Map over the options and display them as listbox options */}
               {options.map((option) => (
                 <Listbox.Option
                   key={option.title}

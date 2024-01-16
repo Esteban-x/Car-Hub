@@ -21,8 +21,8 @@ const Hero = () => {
         </h1>
 
         <p className="hero__subtitle">
-          Un service efficace et rapide de la meilleure qualité que vous pourrez
-          esperer trouver en europe
+          Un service d’une efficacité et d’une rapidité inégalées, offrant la
+          meilleure qualité que vous pourriez espérer trouver en Europe
         </p>
 
         <CustomButton
