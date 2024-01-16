@@ -53,7 +53,8 @@ const SearchBar = () => {
       window.location.pathname
     }?${searchParams.toString()}`;
 
-    router.push(newPathname);
+    window.history.pushState({}, "", newPathname);
+    window.location.reload();
   };
 
   return (
