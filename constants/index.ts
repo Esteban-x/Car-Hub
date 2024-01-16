@@ -43,7 +43,7 @@ export const manufacturers = [
 ];
 
 export const yearsOfProduction = [
-  { title: "Year", value: "" },
+  { title: "Année", value: "" },
   { title: "2015", value: "2015" },
   { title: "2016", value: "2016" },
   { title: "2017", value: "2017" },
@@ -57,40 +57,40 @@ export const yearsOfProduction = [
 
 export const fuels = [
   {
-    title: "Fuel",
+    title: "Essence",
     value: "",
   },
   {
-    title: "Gas",
-    value: "Gas",
+    title: "Diesel",
+    value: "Diesel",
   },
   {
-    title: "Electricity",
-    value: "Electricity",
+    title: "Electrique",
+    value: "Electrique",
   },
 ];
 
 export const footerLinks = [
   {
-    title: "About",
+    title: "A propos",
     links: [
-      { title: "How it works", url: "/" },
-      { title: "Featured", url: "/" },
-      { title: "Partnership", url: "/" },
-      { title: "Bussiness Relation", url: "/" },
+      { title: "Comment sa marche ?", url: "/" },
+      { title: "Autres", url: "/" },
+      { title: "Nos partenaires", url: "/" },
+      { title: "En savoir plus", url: "/" },
     ],
   },
   {
-    title: "Company",
+    title: "Plus d'infos",
     links: [
-      { title: "Events", url: "/" },
+      { title: "Evenements", url: "/" },
       { title: "Blog", url: "/" },
       { title: "Podcast", url: "/" },
-      { title: "Invite a friend", url: "/" },
+      { title: "Inviter un ami", url: "/" },
     ],
   },
   {
-    title: "Socials",
+    title: "Nous suivre",
     links: [
       { title: "Discord", url: "/" },
       { title: "Instagram", url: "/" },
